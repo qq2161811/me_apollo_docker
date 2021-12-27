@@ -1,0 +1,178 @@
+2021-12-27 09:18:43.807  INFO 1 --- [main] c.c.f.a.c.ConfigServiceApplication       : Starting ConfigServiceApplication v1.9.1 using Java 1.8.0_212 on 48f81da913a7 with PID 1 (/apollo-configservice/apollo-configservice-1.9.1.jar started by root in /apollo-configservice)
+2021-12-27 09:18:44.213  INFO 1 --- [main] c.c.f.a.c.ConfigServiceApplication       : The following profiles are active: github
+2021-12-27 09:19:16.375  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-27 09:19:20.459  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3970 ms. Found 17 JPA repository interfaces.
+2021-12-27 09:19:27.396  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7a185023-bc66-39e1-8115-e1442395efac
+2021-12-27 09:19:31.237  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@773bd77b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-27 09:19:31.280  INFO 1 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-27 09:19:35.692  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-27 09:19:35.849  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-27 09:19:35.854  INFO 1 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-12-27 09:19:36.263  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-27 09:19:36.266  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 49454 ms
+2021-12-27 09:19:39.221  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-27 09:19:41.956  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-27 09:19:42.802  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-27 09:19:43.982  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-12-27 09:19:45.902  INFO 1 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-27 09:19:47.046  INFO 1 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-12-27 09:19:47.709  WARN 1 --- [main] org.hibernate.cfg.AnnotationBinder       : HHH000503: A class should not be annotated with both @Inheritance and @MappedSuperclass. @Inheritance will be ignored for: com.ctrip.framework.apollo.common.entity.BaseEntity.
+2021-12-27 09:19:56.270  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-27 09:19:56.313  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-27 09:20:01.732  INFO 1 --- [main] c.c.f.f.i.p.DefaultApplicationProvider   : App ID is set to 100003171 by app.id property from /META-INF/app.properties
+2021-12-27 09:20:01.754  INFO 1 --- [main] c.c.f.f.i.p.DefaultServerProvider        : Environment is set to null. Because it is not available in either (1) JVM system property 'env', (2) OS env variable 'ENV' nor (3) property 'env' from the properties InputStream.
+2021-12-27 09:20:01.765  INFO 1 --- [main] c.c.f.a.biz.service.BizDBPropertySource  : Load config from DB : item.value.length.limit = 20000
+2021-12-27 09:20:01.765  INFO 1 --- [main] c.c.f.a.biz.service.BizDBPropertySource  : Load config from DB : item.key.length.limit = 128
+2021-12-27 09:20:01.767  INFO 1 --- [main] c.c.f.a.biz.service.BizDBPropertySource  : Load config from DB : eureka.service.url = http://192.168.0.152:8082/eureka/
+2021-12-27 09:20:01.767  INFO 1 --- [main] c.c.f.a.biz.service.BizDBPropertySource  : Load config from DB : namespace.lock.switch = false
+2021-12-27 09:20:01.774  INFO 1 --- [main] c.c.f.a.biz.service.BizDBPropertySource  : Load config from DB : config-service.cache.enabled = false
+2021-12-27 09:20:08.809  INFO 1 --- [main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:20 PM'
+2021-12-27 09:20:09.755  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-12-27 09:20:09.758  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-12-27 09:20:11.117  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-12-27 09:20:11.123  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-12-27 09:20:19.806  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-27 09:20:21.432  INFO 1 --- [main] c.c.f.a.c.s.AppNamespaceServiceWithCache : Loaded 2 new app namespaces with startId 2
+2021-12-27 09:20:21.789  INFO 1 --- [main] c.f.a.c.s.ReleaseMessageServiceWithCache : Loaded 1 release messages with startId 1
+2021-12-27 09:20:23.760  INFO 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@42403dc6, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ede8888, org.springframework.security.web.header.HeaderWriterFilter@43cf5bff, org.springframework.security.web.authentication.logout.LogoutFilter@32c6d164, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@999cd18, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65a2755e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6796a873, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74a1d60e, org.springframework.security.web.session.SessionManagementFilter@681b42d3, org.springframework.security.web.access.ExceptionTranslationFilter@1a8e44fe]
+2021-12-27 09:20:24.824  INFO 1 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-27 09:20:29.843  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2021-12-27 09:20:31.021  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-12-27 09:20:31.262  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-12-27 09:20:31.499  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-12-27 09:20:31.510  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2021-12-27 09:20:31.550  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1640568031519 with initial instances count: 0
+2021-12-27 09:20:31.823  INFO 1 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2021-12-27 09:20:31.862  WARN 1 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:20:32.181  INFO 1 --- [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2021-12-27 09:20:32.193  INFO 1 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2021-12-27 09:20:32.264  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path ''
+2021-12-27 09:20:32.667  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application APOLLO-CONFIGSERVICE with eureka with status UP
+2021-12-27 09:20:32.694  INFO 1 --- [Thread-13] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+2021-12-27 09:20:32.895  INFO 1 --- [Thread-13] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2021-12-27 09:20:32.914  INFO 1 --- [Thread-13] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2021-12-27 09:20:32.918  INFO 1 --- [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2021-12-27 09:20:32.928  INFO 1 --- [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2021-12-27 09:20:32.929  INFO 1 --- [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2021-12-27 09:20:33.018  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-27 09:20:33.039  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2021-12-27 09:20:33.094  INFO 1 --- [Thread-13] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2021-12-27 09:20:33.182  INFO 1 --- [main] c.c.f.a.c.ConfigServiceApplication       : Started ConfigServiceApplication in 121.657 seconds (JVM running for 139.083)
+2021-12-27 09:20:33.227  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2021-12-27 09:20:33.242  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2021-12-27 09:20:33.257  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-12-27 09:20:33.609  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-12-27 09:20:33.619  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-12-27 09:20:33.620  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-12-27 09:20:33.621  INFO 1 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-12-27 09:20:34.251  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:20:34.336  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-12-27 09:20:34.337  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-12-27 09:20:34.341  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-12-27 09:20:34.342  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-12-27 09:20:34.342  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-12-27 09:20:34.343  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-12-27 09:20:34.344  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-12-27 09:20:35.608  INFO 1 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-27 09:20:35.610  INFO 1 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-27 09:20:35.613  INFO 1 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-12-27 09:20:36.383  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-12-27 09:20:36.405  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2021-12-27 09:20:36.422  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-12-27 09:20:36.455  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1640568036455 with initial instances count: 0
+2021-12-27 09:20:36.470  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application APOLLO-CONFIGSERVICE with eureka with status DOWN
+2021-12-27 09:20:36.478  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application APOLLO-CONFIGSERVICE with eureka with status UP
+2021-12-27 09:20:36.489  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1640568036489, current=UP, previous=DOWN]
+2021-12-27 09:20:36.627  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APOLLO-CONFIGSERVICE/48f81da913a7:apollo-configservice:8080: registering service...
+2021-12-27 09:20:37.069  INFO 1 --- [http-nio-8080-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APOLLO-CONFIGSERVICE/48f81da913a7:apollo-configservice:8080 with status UP (replication=false)
+2021-12-27 09:20:37.077  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APOLLO-CONFIGSERVICE/48f81da913a7:apollo-configservice:8080 - registration status: 204
+2021-12-27 09:21:01.173  WARN 1 --- [http-nio-8080-exec-1] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: APOLLO-ADMINSERVICE - 5476fc87c8cf:apollo-adminservice:8090
+2021-12-27 09:21:01.175  WARN 1 --- [http-nio-8080-exec-1] c.n.eureka.resources.InstanceResource    : Not Found (Renew): APOLLO-ADMINSERVICE - 5476fc87c8cf:apollo-adminservice:8090
+2021-12-27 09:21:01.204  INFO 1 --- [http-nio-8080-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APOLLO-ADMINSERVICE/5476fc87c8cf:apollo-adminservice:8090 with status UP (replication=false)
+2021-12-27 09:21:06.380  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-12-27 09:21:06.381  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-12-27 09:21:06.382  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-12-27 09:21:06.383  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-12-27 09:21:06.383  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-12-27 09:21:06.384  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2021-12-27 09:21:06.384  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-12-27 09:21:06.393  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-12-27 09:21:31.826  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:21:32.958  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2021-12-27 09:21:34.301  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:22:31.782  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:22:32.958  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 46ms
+2021-12-27 09:22:34.258  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:23:31.739  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:23:32.959  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 47ms
+2021-12-27 09:23:34.215  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:24:31.696  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:24:32.959  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 46ms
+2021-12-27 09:24:34.172  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:25:31.654  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:25:32.959  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 46ms
+2021-12-27 09:25:34.132  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:26:31.611  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:26:32.962  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 49ms
+2021-12-27 09:26:34.091  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:27:31.567  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:27:32.967  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 50ms
+2021-12-27 09:27:34.048  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:28:31.524  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:28:32.968  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 47ms
+2021-12-27 09:28:34.004  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:29:31.481  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:29:32.968  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 46ms
+2021-12-27 09:29:33.961  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:30:31.438  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:30:32.969  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 46ms
+2021-12-27 09:30:33.918  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:31:31.396  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:31:32.970  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 47ms
+2021-12-27 09:31:33.875  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:32:31.354  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:32:32.971  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 47ms
+2021-12-27 09:32:33.833  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:33:31.390  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:33:32.991  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2021-12-27 09:33:33.858  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:34:31.353  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:34:32.991  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 54ms
+2021-12-27 09:34:33.809  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:35:31.322  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:35:32.183  INFO 1 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 3
+2021-12-27 09:35:32.991  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 38ms
+2021-12-27 09:35:33.775  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:36:31.279  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:36:32.991  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 46ms
+2021-12-27 09:36:33.735  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:37:31.237  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:37:32.991  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 46ms
+2021-12-27 09:37:33.692  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:38:31.195  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:38:32.992  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 46ms
+2021-12-27 09:38:33.649  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:39:31.153  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:39:32.993  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 47ms
+2021-12-27 09:39:33.604  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:40:31.111  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:40:32.993  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 46ms
+2021-12-27 09:40:33.560  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:41:31.128  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:41:33.008  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2021-12-27 09:41:33.577  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:42:31.087  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:42:33.008  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 45ms
+2021-12-27 09:42:33.535  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:43:31.049  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:43:33.008  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 44ms
+2021-12-27 09:43:33.494  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:44:31.019  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:44:33.010  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 35ms
+2021-12-27 09:44:33.462  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:45:30.978  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:45:33.012  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 47ms
+2021-12-27 09:45:33.421  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-12-27 09:46:30.939  WARN 1 --- [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2021-12-27 09:46:33.013  INFO 1 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 45ms
+2021-12-27 09:46:33.378  INFO 1 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

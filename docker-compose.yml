@@ -1,0 +1,196 @@
+version: '2'
+services:
+    # 开发环境  configservice
+    apollo-configservice-dev:
+        container_name: apollo-configservice-dev
+        image: apolloconfig/apollo-configservice
+        restart: always
+        depends_on:
+            - apollo-db
+        environment:
+            SPRING_DATASOURCE_URL: ${DATASOURCE_URL_DEV}
+            SPRING_DATASOURCE_USERNAME: ${DATASOURCE_USERNAME}
+            SPRING_DATASOURCE_PASSWORD: ${DATASOURCE_PASSWORD}
+            EUREKA_INSTANCE_IP_ADDRESS: ${IP_ADDRESS}
+            EUREKA_INSTANCE_HOME_PAGE_URL: http://${IP_ADDRESS}:${CONFIG_PORT_DEV}
+        volumes:
+            - ${LOG_BASE_DIR}/apollo-configservice-dev/logs:/opt/logs
+        ports:
+            - "${CONFIG_PORT_DEV}:8080"
+
+    # 开发环境  adminservice
+    apollo-adminservice-dev:
+        container_name: apollo-adminservice-dev
+        image: apolloconfig/apollo-adminservice
+        restart: always
+        depends_on:
+            - apollo-configservice-dev
+            - apollo-db
+        environment:
+            SPRING_DATASOURCE_URL: ${DATASOURCE_URL_DEV}
+            SPRING_DATASOURCE_USERNAME: ${DATASOURCE_USERNAME}
+            SPRING_DATASOURCE_PASSWORD: ${DATASOURCE_PASSWORD}
+            EUREKA_INSTANCE_IP_ADDRESS: ${IP_ADDRESS}
+            EUREKA_INSTANCE_HOME_PAGE_URL: http://${IP_ADDRESS}:${ADMIN_PORT_DEV}
+        volumes:
+            - ${LOG_BASE_DIR}/apollo-adminservice-dev/logs:/opt/logs
+        ports:
+            - "${ADMIN_PORT_DEV}:8090"
+
+    # fat  configservice
+    apollo-configservice-fat:
+        container_name: apollo-configservice-fat
+        image: apolloconfig/apollo-configservice
+        restart: always
+        depends_on:
+            - apollo-db
+        environment:
+            SPRING_DATASOURCE_URL: ${DATASOURCE_URL_FAT}
+            SPRING_DATASOURCE_USERNAME: ${DATASOURCE_USERNAME}
+            SPRING_DATASOURCE_PASSWORD: ${DATASOURCE_PASSWORD}
+            EUREKA_INSTANCE_IP_ADDRESS: ${IP_ADDRESS}
+            EUREKA_INSTANCE_HOME_PAGE_URL: http://${IP_ADDRESS}:${CONFIG_PORT_FAT}
+        volumes:
+            - ${LOG_BASE_DIR}/apollo-configservice-fat/logs:/opt/logs
+        ports:
+            - "${CONFIG_PORT_FAT}:8080"
+
+    # fat  adminservice
+    apollo-adminservice-fat:
+        container_name: apollo-adminservice-fat
+        image: apolloconfig/apollo-adminservice
+        restart: always
+        depends_on:
+            - apollo-configservice-fat
+            - apollo-db
+        environment:
+            SPRING_DATASOURCE_URL: ${DATASOURCE_URL_FAT}
+            SPRING_DATASOURCE_USERNAME: ${DATASOURCE_USERNAME}
+            SPRING_DATASOURCE_PASSWORD: ${DATASOURCE_PASSWORD}
+            EUREKA_INSTANCE_IP_ADDRESS: ${IP_ADDRESS}
+            EUREKA_INSTANCE_HOME_PAGE_URL: http://${IP_ADDRESS}:${ADMIN_PORT_FAT}
+        volumes:
+            - ${LOG_BASE_DIR}/apollo-adminservice-fat/logs:/opt/logs
+        ports:
+            - "${ADMIN_PORT_FAT}:8090"
+
+    # uat  configservice
+    apollo-configservice-uat:
+        container_name: apollo-configservice-uat
+        image: apolloconfig/apollo-configservice
+        restart: always
+        depends_on:
+            - apollo-db
+        environment:
+            SPRING_DATASOURCE_URL: ${DATASOURCE_URL_UAT}
+            SPRING_DATASOURCE_USERNAME: ${DATASOURCE_USERNAME}
+            SPRING_DATASOURCE_PASSWORD: ${DATASOURCE_PASSWORD}
+            EUREKA_INSTANCE_IP_ADDRESS: ${IP_ADDRESS}
+            EUREKA_INSTANCE_HOME_PAGE_URL: http://${IP_ADDRESS}:${CONFIG_PORT_UAT}
+        volumes:
+            - ${LOG_BASE_DIR}/apollo-configservice-uat/logs:/opt/logs
+        ports:
+            - "${CONFIG_PORT_UAT}:8080"
+
+    # uat  adminservice
+    apollo-adminservice-uat:
+        container_name: apollo-adminservice-uat
+        image: apolloconfig/apollo-adminservice
+        restart: always
+        depends_on:
+            - apollo-configservice-uat
+            - apollo-db
+        environment:
+            SPRING_DATASOURCE_URL: ${DATASOURCE_URL_UAT}
+            SPRING_DATASOURCE_USERNAME: ${DATASOURCE_USERNAME}
+            SPRING_DATASOURCE_PASSWORD: ${DATASOURCE_PASSWORD}
+            EUREKA_INSTANCE_IP_ADDRESS: ${IP_ADDRESS}
+            EUREKA_INSTANCE_HOME_PAGE_URL: http://${IP_ADDRESS}:${ADMIN_PORT_UAT}
+        volumes:
+            - ${LOG_BASE_DIR}/apollo-adminservice-uat/logs:/opt/logs
+        ports:
+            - "${ADMIN_PORT_UAT}:8090"
+
+
+    # pro  configservice
+    apollo-configservice-pro:
+        container_name: apollo-configservice-pro
+        image: apolloconfig/apollo-configservice
+        restart: always
+        depends_on:
+            - apollo-db
+        environment:
+            SPRING_DATASOURCE_URL: ${DATASOURCE_URL_PRO}
+            SPRING_DATASOURCE_USERNAME: ${DATASOURCE_USERNAME}
+            SPRING_DATASOURCE_PASSWORD: ${DATASOURCE_PASSWORD}
+            EUREKA_INSTANCE_IP_ADDRESS: ${IP_ADDRESS}
+            EUREKA_INSTANCE_HOME_PAGE_URL: http://${IP_ADDRESS}:${CONFIG_PORT_PRO}
+        volumes:
+            - ${LOG_BASE_DIR}/apollo-configservice-pro/logs:/opt/logs
+        ports:
+            - "${CONFIG_PORT_PRO}:8080"
+
+    # pro  adminservice
+    apollo-adminservice-pro:
+        container_name: apollo-adminservice-pro
+        image: apolloconfig/apollo-adminservice
+        restart: always
+        depends_on:
+            - apollo-configservice-pro
+            - apollo-db
+        environment:
+            SPRING_DATASOURCE_URL: ${DATASOURCE_URL_PRO}
+            SPRING_DATASOURCE_USERNAME: ${DATASOURCE_USERNAME}
+            SPRING_DATASOURCE_PASSWORD: ${DATASOURCE_PASSWORD}
+            EUREKA_INSTANCE_IP_ADDRESS: ${IP_ADDRESS}
+            EUREKA_INSTANCE_HOME_PAGE_URL: http://${IP_ADDRESS}:${ADMIN_PORT_PRO}
+        volumes:
+            - ${LOG_BASE_DIR}/apollo-adminservice-pro/logs:/opt/logs
+        ports:
+            - "${ADMIN_PORT_PRO}:8090"
+
+    # portal
+    apollo-portal:
+        container_name: apollo-portal
+        image: apolloconfig/apollo-portal
+        restart: always
+        depends_on:
+            - apollo-adminservice-dev
+            - apollo-adminservice-fat
+            - apollo-adminservice-uat
+            - apollo-adminservice-pro
+            - apollo-db
+        environment:
+            SPRING_DATASOURCE_URL: ${PORTAL_DATASOURCE_URL}
+            SPRING_DATASOURCE_USERNAME: ${DATASOURCE_USERNAME}
+            SPRING_DATASOURCE_PASSWORD: ${DATASOURCE_PASSWORD}
+        volumes:
+            - ${LOG_BASE_DIR}/apollo-portal/logs:/opt/logs
+            - ${BUILD_BASE_DIR}/build/apollo-env.properties:/apollo-portal/config/apollo-env.properties
+        ports:
+            - "8070:8070"
+    apollo-db:
+        image: mysql:5.7
+        container_name: apollo-db
+        environment:
+            TZ: Asia/Shanghai
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+        ports:
+            - "13306:3306"
+        volumes:
+            - ./sql:/docker-entrypoint-initdb.d
+            - ./database:/var/lib/mysql
+        volumes_from:
+            - apollo-dbdata
+        restart: always
+    apollo-dbdata:
+        image: alpine:latest
+        container_name: apollo-dbdata
+        volumes:
+            - /var/lib/mysql
+        restart: always
+
+#networks:
+#    default:
+#        external:
+#            name: local
