@@ -1,0 +1,11 @@
+.DS_Store
+apollo-adminservice-dev/logs/*/*
+apollo-adminservice-fat/logs/*/*
+apollo-adminservice-pro/logs/*/*
+apollo-adminservice-uat/logs/*/*
+apollo-configservice-dev/logs/*/*
+apollo-configservice-fat/logs/*/*
+apollo-configservice-pro/logs/*/*
+apollo-configservice-uat/logs/*/*
+apollo-portal/logs/*/*
+database/*
